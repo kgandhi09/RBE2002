@@ -394,7 +394,7 @@ environment/project/io.sloeber.core.toolChain.release.2058300843/JANTJE.BOARD_NA
 environment/project/io.sloeber.core.toolChain.release.2058300843/JANTJE.BOARD_NAME/value=ESP32 Dev Module
 environment/project/io.sloeber.core.toolChain.release.2058300843/JANTJE.COM_PORT/delimiter=;
 environment/project/io.sloeber.core.toolChain.release.2058300843/JANTJE.COM_PORT/operation=replace
-environment/project/io.sloeber.core.toolChain.release.2058300843/JANTJE.COM_PORT/value=COM22
+environment/project/io.sloeber.core.toolChain.release.2058300843/JANTJE.COM_PORT/value=COM26
 environment/project/io.sloeber.core.toolChain.release.2058300843/JANTJE.ECLIPSE_LOCATION/delimiter=;
 environment/project/io.sloeber.core.toolChain.release.2058300843/JANTJE.ECLIPSE_LOCATION/operation=replace
 environment/project/io.sloeber.core.toolChain.release.2058300843/JANTJE.ECLIPSE_LOCATION/value=C\:\\RBE\\sloeber\\
