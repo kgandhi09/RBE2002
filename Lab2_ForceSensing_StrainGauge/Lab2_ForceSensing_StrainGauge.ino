@@ -25,52 +25,37 @@ TaskHandle_t complexHandlerTask;
 /*
  * Student will edit samplingFreq
  */
-uint32_t samplingFreq = 40; //Hz
-
-
-double R = 4467; // ohms
-double C = 0.000000106; // F
-double omega = 2*3.14*samplingFreq;
-double omegaRC = omega*R*C;
-double vout = 0;
-double dtOverRC = 0.05; //((1/double(samplingFreq))/(R*C));
-int prevADC = 0;
-double prevVout = 0;
+uint32_t samplingFreq = 100; //Hz
+double volts = 0;
 int timeMillis;
+int count = 0;
+double force;
 
 /*
  * Here is where you implement your filter
  */
 void studentCode()
 {
+
 	timeMillis = millis();
 	int adc = local_adc1_read(0); //reads ADC1:0, which is pin 36, 12-bit conversion
-	static int dac = 0;
-	//	Serial.print("adc: ");
-	//	Serial.println(adc);
+//	static int dac = 0;
 
-	vout = adc - prevADC + prevVout - (dtOverRC*prevVout) + 128; // high pass
+	volts = (adc*3.3)/4096;
 
+	//	dac = adc >> 4; //the dac takes an 8-bit value, so divide the adc by 16
+	force = (volts * 500 * 9.8)/3.5;
 
-
-	//	Serial.print("dtOverRC: ");
-	//	Serial.println(dtOverRC);
-	//  int vout = adc * (1 / (1 + omegaRC));
-	//	dac = vout;
-
-	dac = (int)vout >> 4; //the dac takes an 8-bit value, so divide the adc by 16
 
 	Serial.print("Time: ");
 	Serial.print(timeMillis);
 	Serial.print("\tADC: ");
-	Serial.println(adc);
+	Serial.print(adc);
+	Serial.print("\tVolts");
+	Serial.print(volts);
+	Serial.print("\tForce: ");
+	Serial.println(force);
 
-	prevADC = adc;
-	prevVout = vout;
-	//	Serial.print("prevADC: ");
-	//	Serial.println(prevADC);
-
-	analogWrite(25, (uint8_t) dac); //pin 25 is DAC1, but note that it's 8-bit
 }
 
 /*
@@ -133,7 +118,7 @@ void setup() {
 			count, // count, now in us
 			true); // Reload after finishes, run again and again
 	timerAlarmEnable(timer); // Enable timer
-	analogRead(36);
+//	analogRead(36);
 
 #define V_REF 1100  // ADC reference voltage
 
