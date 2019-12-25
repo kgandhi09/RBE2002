@@ -1,0 +1,11 @@
+<map id="StudentsRobot.h" name="StudentsRobot.h">
+<area shape="rect" id="node2" href="$config_8h.html" title="config.h" alt="" coords="23,169,91,196"/>
+<area shape="rect" id="node4" href="$ServoEncoderPIDMotor_8h.html" title="src/pid/ServoEncoderPIDMotor.h" alt="" coords="516,87,731,114"/>
+<area shape="rect" id="node11" href="$HBridgeEncoderPIDMotor_8h.html" title="src/pid/HBridgeEncoderPIDMotor.h" alt="" coords="265,87,491,114"/>
+<area shape="rect" id="node12" href="$ServoAnalogPIDMotor_8h.html" title="src/pid/ServoAnalogPIDMotor.h" alt="" coords="755,87,961,114"/>
+<area shape="rect" id="node13" href="$DrivingChassis_8h.html" title="DrivingChassis.h" alt="" coords="67,87,190,114"/>
+<area shape="rect" id="node14" href="$GetIMU_8h.html" title="src/commands/GetIMU.h" alt="" coords="143,169,312,196"/>
+<area shape="rect" id="node19" href="$IRCamSimplePacketComsServer_8h.html" title="src/commands/IRCamSimple\lPacketComsServer.h" alt="" coords="1037,80,1231,121"/>
+<area shape="rect" id="node5" href="$PIDMotor_8h.html" title="PIDMotor.h" alt="" coords="571,169,660,196"/>
+<area shape="rect" id="node7" href="$RBEPID_8h.html" title="../../RBEPID.h" alt="" coords="561,244,669,271"/>
+</map>
